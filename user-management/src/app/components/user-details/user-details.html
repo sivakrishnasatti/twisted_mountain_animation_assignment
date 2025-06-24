@@ -1,0 +1,14 @@
+<div *ngIf="user" class="details-container">
+  <button class="back-button" (click)="goBack()">←</button>
+  <h2>{{ getDisplayName() }}</h2>
+  <div class="details-grid">
+    <div class="detail-item" *ngFor="let key of objectKeys(user)">
+      <span class="label">{{ key | titlecase }}</span>
+      <span class="value">{{ user[key] }}</span>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading user details...</p>
+</ng-template>

@@ -1,0 +1,17 @@
+<div *ngIf="!users.length">Loading users...</div>
+<div class="table-container" *ngIf="users?.length && headers?.length">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let header of headers">{{ header | titlecase}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users" (click)="onRowClick(user)">
+        <td *ngFor="let header of headers">
+          <input [(ngModel)]="user[header]" (click)="$event.stopPropagation()" autocomplete="off" tabindex="-1"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

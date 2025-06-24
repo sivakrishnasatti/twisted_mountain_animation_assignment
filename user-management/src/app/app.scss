@@ -1,0 +1,23 @@
+header {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+input {
+  max-height: 36px;
+  min-height: 30px;
+  line-height: 1.4;
+  padding: 6px;
+  box-sizing: border-box;
+  display: inline-block;
+
+  &:focus {
+    outline: none;
+    background-color: #f0f8ff;
+  }
+}
